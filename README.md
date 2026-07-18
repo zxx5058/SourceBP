@@ -37,15 +37,9 @@
 
 ## ✨ A Gentle Introduction
 
-Video-based blood pressure (BP) estimation offers a promising **non-contact** route to continuous cardiovascular monitoring, yet remains difficult: BP is a **latent hemodynamic variable** without an explicit visual periodic signature. Existing video-based methods mainly exploit recovered rPPG waveforms or handcrafted pulse descriptors, while the **complementary appearance-related vascular cues** and **dynamic pulse-related physiological cues** are often insufficiently modeled and fused.
-
-We propose **SourceBP**, a **source-adaptive dual-branch representation fusion** framework for video-based BP estimation. SourceBP consists of three modules:
-
-- **Appearance-based Representation Learning** — captures stable, subject-level facial cues as a static prior related to demographic and vascular factors.
-- **Temporal Physiological Signal Modeling** — extracts complementary **morphological**, **rhythmic**, and **geometric** descriptors from facial rPPG signals to characterize short-term cardiovascular hemodynamics.
-- **Source-Adaptive Dual-Branch Fusion** — adaptively weights the two branches by reliability, **suppresses demographic shortcuts**, and learns **target-specific non-negative fusion weights** for SBP and DBP.
-
-Experiments on two public datasets, **MCD-rPPG** and **Face-Hand**, show that SourceBP outperforms recent state-of-the-art methods, achieving MAEs of **10.26 / 6.86 mmHg** (SBP / DBP) on MCD-rPPG and **13.96 / 10.49 mmHg** on Face-Hand.
+Video-based blood pressure (BP) estimation provides a promising non-contact approach for continuous cardiovascular monitoring, but remains difficult because BP is a latent hemodynamic variable without an explicit visual periodic signature. Existing video-based methods mainly exploit recovered rPPG waveforms or handcrafted pulse descriptors, while the complementary appearance-related vascular cues and dynamic pulse-related physiological cues are often insufficiently modeled and fused. To address these challenges, we propose SourceBP, a source-adaptive dual-branch representation fusion framework for video-based BP estimation. SourceBP consists of an appearance-based representation learning module, a temporal physiological signal modeling module, and a source-adaptive dual-branch fusion module. 
+The appearance module captures stable subject-level facial cues as a static prior related to demographic and vascular factors, while the physiological module extracts complementary morphological, rhythmic, and geometric descriptors from facial rPPG signals to characterize short-term cardiovascular hemodynamics. 
+The fusion module adaptively weights the two branches according to their reliability, suppresses demographic shortcuts, and learns target-specific non-negative fusion weights for systolic BP (SBP) and diastolic BP (DBP) estimation. Experiments on two public datasets, MCD-rPPG and Face-Hand, demonstrate that SourceBP outperforms recent state-of-the-art methods, achieving MAEs of 10.26/6.86 mmHg for SBP/DBP on MCD-rPPG and 13.96/10.49 mmHg on Face-Hand, respectively.
 
 <p align="center">
   <img src="Method.png" width="100%">
