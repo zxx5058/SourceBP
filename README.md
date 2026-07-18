@@ -48,7 +48,11 @@ Video-based blood pressure (BP) estimation provides a promising non-contact appr
   <br><em>Overview of the proposed SourceBP dual-branch framework.</em>
 </p>
 
+---
+
 ## 🧠 Method
+
+<div align="justify">
 
 **(A) Appearance-based Representation Learning.**
 A representative aligned facial frame is encoded by a **heterogeneous ensemble of five frozen pretrained encoders** — ResNet-50, ConvNeXt-T, ViT-B/16, EfficientNet-B0, and the self-supervised DINOv2 — combining convolutional, transformer-based, and self-supervised visual priors. Each backbone embedding is projected via **leakage-free PCA** and mapped to a per-encoder BP prediction by a closed-form **ridge** head, producing an appearance prediction vector $\mathbf{a}^{s}\in\mathbb{R}^{10}$.
@@ -59,15 +63,21 @@ rPPG signals are extracted from multiple facial ROIs (forehead, left/right cheek
 **(C) Source-Adaptive Dual-Branch Fusion.**
 Appearance and pulse predictions are stacked into a unified base-predictor vector. A **provenance-aware** scoring stage discourages reliance on demographic shortcuts (age, BMI, sex), and a **provenance-regularized super learner** estimates **non-negative** fusion weights per target, giving robust final SBP / DBP without explicit source labels at inference.
 
+</div>
+
 ---
 
 ## 📦 Datasets
+
+<div align="justify">
 
 We evaluate SourceBP on two public video-based BP benchmarks.
 
 **MCD-rPPG** — *Multi-Camera Dataset for Remote Photoplethysmography*, introduced in *"Gaze into the Heart: A Multi-View Video Dataset for rPPG and Health Biomarkers Estimation"* (ACM MM 2025). It contains **3,600 synchronized recordings from 600 subjects**, captured in **resting and post-exercise** states from **three camera views** (frontal webcam, FullHD camcorder, and mobile phone). Each recording is paired with a **100 Hz PPG** signal, ECG, and **13 health biomarkers**, including systolic/diastolic blood pressure, age, sex, and BMI.
 
 **Face-Hand** — introduced in *"Video-based estimation of blood pressure"* (PLOS ONE, 2025). It comprises **400 subjects (200 from India and 200 from Sierra Leone)**, with videos in which **both the face and the hand are clearly visible**, enabling pulse-transit-time–based estimation between facial and palm ROIs. It provides paired cuff blood pressure labels and demographic attributes.
+
+</div>
 
 | Dataset | Subjects / Videos | Modality | Ground-truth labels | Links |
 |---|:--:|---|---|---|
@@ -168,9 +178,14 @@ State-of-the-art performance on both public benchmarks (video-only, subject-inde
 </p>
 
 ---
+
 ## 🙏 Acknowledgements
 
+<div align="justify">
+
 This work is sponsored by the National Natural Science Foundation of China (No. 62371189). We thank the authors of the MCD-rPPG and Face-Hand datasets for making their data publicly available.
+
+</div>
 
 ---
 
