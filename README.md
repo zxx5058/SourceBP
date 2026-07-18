@@ -144,21 +144,6 @@ State-of-the-art performance on both public benchmarks (video-only, subject-inde
 
 ---
 
-## 📌 Citation
-
-If you find this work useful, please consider citing:
-
-```bibtex
-@article{zhang2026sourcebp,
-  title   = {SourceBP: Source-Adaptive Dual-Branch Representation Fusion for Video-Based Blood Pressure Estimation},
-  author  = {Zhang, Xinxin and Pei, Gan and Zheng, Feng and Zhai, Guangtao and Hu, Menghan},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
-  year    = {2026}
-}
-```
-
----
-
 ## 🙏 Acknowledgements
 
 This work is sponsored by the National Natural Science Foundation of China (No. 62371189). We thank the authors of the MCD-rPPG and Face-Hand datasets for making their data publicly available.
