@@ -138,7 +138,7 @@ State-of-the-art performance on both public benchmarks (video-only, subject-inde
 | **Face-Hand** | **13.96** | **10.49** |
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/zxx5058/SourceBP/refs/heads/main/ImageFolder/Result.png" width="100%">
+  <img src="fig4_bland_altman_01.png" width="100%">
   <br><em>Comparison with recent state-of-the-art methods across hypertension subgroups.</em>
 </p>
 
