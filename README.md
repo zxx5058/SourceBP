@@ -48,7 +48,7 @@ We propose **SourceBP**, a **source-adaptive dual-branch representation fusion**
 Experiments on two public datasets, **MCD-rPPG** and **Face-Hand**, show that SourceBP outperforms recent state-of-the-art methods, achieving MAEs of **10.26 / 6.86 mmHg** (SBP / DBP) on MCD-rPPG and **13.96 / 10.49 mmHg** on Face-Hand.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/zxx5058/SourceBP/refs/heads/main/ImageFolder/Framework.png" width="100%">
+  <img src="Method.png" width="100%">
   <br><em>Overview of the proposed SourceBP dual-branch framework.</em>
 </p>
 
