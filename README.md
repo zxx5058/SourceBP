@@ -63,12 +63,20 @@ Appearance and pulse predictions are stacked into a unified base-predictor vecto
 
 ## 📦 Datasets
 
-| Dataset | Modality | Task | Link |
-|---|---|---|---|
-| **MCD-rPPG** | Facial video + BP | Video-based SBP / DBP | *[add official link](https://huggingface.co/datasets/wengziheng/mcd_rppg)* |
-| **Face-Hand** | Face + hand (acral) video + BP | Video-based SBP / DBP | *add official link* |
+## 📦 Datasets
 
-> Please obtain the datasets from their official sources and follow their respective licenses/terms.
+We evaluate SourceBP on two public video-based BP benchmarks.
+
+**MCD-rPPG** — *Multi-Camera Dataset for Remote Photoplethysmography*, introduced in *"Gaze into the Heart: A Multi-View Video Dataset for rPPG and Health Biomarkers Estimation"* (ACM MM 2025). It contains **3,600 synchronized recordings from 600 subjects**, captured in **resting and post-exercise** states from **three camera views** (frontal webcam, FullHD camcorder, and mobile phone). Each recording is paired with a **100 Hz PPG** signal, ECG, and **13 health biomarkers**, including systolic/diastolic blood pressure, age, sex, and BMI.
+
+**Face-Hand** — introduced in *"Video-based estimation of blood pressure"* (PLOS ONE, 2025). It comprises **400 subjects (200 from India and 200 from Sierra Leone)**, with videos in which **both the face and the hand are clearly visible**, enabling pulse-transit-time–based estimation between facial and palm ROIs. It provides paired cuff blood pressure labels and demographic attributes.
+
+| Dataset | Subjects / Videos | Modality | Ground-truth labels | Links |
+|---|:--:|---|---|---|
+| **MCD-rPPG** | 600 / 3,600 | Multi-view facial video (3 cameras) | SBP, DBP, PPG@100Hz, ECG, +13 biomarkers | [Paper](https://arxiv.org/abs/2508.17924) · [Dataset](https://huggingface.co/datasets/kyegorov/mcd_rppg) · [Code](https://github.com/ksyegorov/mcd_rppg) |
+| **Face-Hand** | 400 | Face + hand (palm) video | SBP, DBP (cuff), demographics | [Paper](https://doi.org/10.1371/journal.pone.0311654) · [Dataset & Code](https://github.com/AiPEX-Lab/vbpe) |
+
+> Please obtain the datasets from their official sources and follow their respective licenses/terms, and **cite the original dataset papers** when using them.
 > After downloading, organize the data as expected by the preprocessing scripts (see below) and update the paths in the config.
 
 ```
