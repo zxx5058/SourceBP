@@ -63,8 +63,6 @@ Appearance and pulse predictions are stacked into a unified base-predictor vecto
 
 ## 📦 Datasets
 
-## 📦 Datasets
-
 We evaluate SourceBP on two public video-based BP benchmarks.
 
 **MCD-rPPG** — *Multi-Camera Dataset for Remote Photoplethysmography*, introduced in *"Gaze into the Heart: A Multi-View Video Dataset for rPPG and Health Biomarkers Estimation"* (ACM MM 2025). It contains **3,600 synchronized recordings from 600 subjects**, captured in **resting and post-exercise** states from **three camera views** (frontal webcam, FullHD camcorder, and mobile phone). Each recording is paired with a **100 Hz PPG** signal, ECG, and **13 health biomarkers**, including systolic/diastolic blood pressure, age, sex, and BMI.
