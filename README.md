@@ -65,7 +65,7 @@ Appearance and pulse predictions are stacked into a unified base-predictor vecto
 
 | Dataset | Modality | Task | Link |
 |---|---|---|---|
-| **MCD-rPPG** | Facial video + BP | Video-based SBP / DBP | *add official link* |
+| **MCD-rPPG** | Facial video + BP | Video-based SBP / DBP | *[add official link](https://huggingface.co/datasets/wengziheng/mcd_rppg)* |
 | **Face-Hand** | Face + hand (acral) video + BP | Video-based SBP / DBP | *add official link* |
 
 > Please obtain the datasets from their official sources and follow their respective licenses/terms.
