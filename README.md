@@ -37,16 +37,16 @@
 
 ## ✨ A Gentle Introduction
 
-Video-based blood pressure (BP) estimation provides a promising non-contact approach for continuous cardiovascular monitoring, but remains difficult because BP is a latent hemodynamic variable without an explicit visual periodic signature. Existing video-based methods mainly exploit recovered rPPG waveforms or handcrafted pulse descriptors, while the complementary appearance-related vascular cues and dynamic pulse-related physiological cues are often insufficiently modeled and fused. To address these challenges, we propose SourceBP, a source-adaptive dual-branch representation fusion framework for video-based BP estimation. SourceBP consists of an appearance-based representation learning module, a temporal physiological signal modeling module, and a source-adaptive dual-branch fusion module. 
-The appearance module captures stable subject-level facial cues as a static prior related to demographic and vascular factors, while the physiological module extracts complementary morphological, rhythmic, and geometric descriptors from facial rPPG signals to characterize short-term cardiovascular hemodynamics. 
-The fusion module adaptively weights the two branches according to their reliability, suppresses demographic shortcuts, and learns target-specific non-negative fusion weights for systolic BP (SBP) and diastolic BP (DBP) estimation. Experiments on two public datasets, MCD-rPPG and Face-Hand, demonstrate that SourceBP outperforms recent state-of-the-art methods, achieving MAEs of 10.26/6.86 mmHg for SBP/DBP on MCD-rPPG and 13.96/10.49 mmHg on Face-Hand, respectively.
+<div align="justify">
+
+Video-based blood pressure (BP) estimation provides a promising non-contact approach for continuous cardiovascular monitoring, but remains difficult because BP is a latent hemodynamic variable without an explicit visual periodic signature. Existing video-based methods mainly exploit recovered rPPG waveforms or handcrafted pulse descriptors, while the complementary appearance-related vascular cues and dynamic pulse-related physiological cues are often insufficiently modeled and fused. To address these challenges, we propose SourceBP, a source-adaptive dual-branch representation fusion framework for video-based BP estimation. SourceBP consists of an appearance-based representation learning module, a temporal physiological signal modeling module, and a source-adaptive dual-branch fusion module. The appearance module captures stable subject-level facial cues as a static prior related to demographic and vascular factors, while the physiological module extracts complementary morphological, rhythmic, and geometric descriptors from facial rPPG signals to characterize short-term cardiovascular hemodynamics. The fusion module adaptively weights the two branches according to their reliability, suppresses demographic shortcuts, and learns target-specific non-negative fusion weights for systolic BP (SBP) and diastolic BP (DBP) estimation. Experiments on two public datasets, MCD-rPPG and Face-Hand, demonstrate that SourceBP outperforms recent state-of-the-art methods, achieving MAEs of 10.26/6.86 mmHg for SBP/DBP on MCD-rPPG and 13.96/10.49 mmHg on Face-Hand, respectively.
+
+</div>
 
 <p align="center">
   <img src="Method.png" width="100%">
   <br><em>Overview of the proposed SourceBP dual-branch framework.</em>
 </p>
-
----
 
 ## 🧠 Method
 
@@ -130,12 +130,37 @@ python run_sourcebp.py --dataset MCD-rPPG --config configs/mcd_rppg.yaml
 
 ## 📊 Results
 
+<div align="justify">
+
 State-of-the-art performance on both public benchmarks (video-only, subject-independent evaluation):
 
-| Dataset | SBP MAE (mmHg) | DBP MAE (mmHg) |
-|:--|:--:|:--:|
-| **MCD-rPPG** | **10.26** | **6.86** |
-| **Face-Hand** | **13.96** | **10.49** |
+</div>
+
+<div align="center">
+
+<table align="center">
+  <thead>
+    <tr>
+      <th align="left">Dataset</th>
+      <th align="center">SBP MAE (mmHg)</th>
+      <th align="center">DBP MAE (mmHg)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><b>MCD-rPPG</b></td>
+      <td align="center"><b>10.26</b></td>
+      <td align="center"><b>6.86</b></td>
+    </tr>
+    <tr>
+      <td align="left"><b>Face-Hand</b></td>
+      <td align="center"><b>13.96</b></td>
+      <td align="center"><b>10.49</b></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
 
 <p align="center">
   <img src="fig4_bland_altman_01.png" width="100%">
@@ -143,7 +168,6 @@ State-of-the-art performance on both public benchmarks (video-only, subject-inde
 </p>
 
 ---
-
 ## 🙏 Acknowledgements
 
 This work is sponsored by the National Natural Science Foundation of China (No. 62371189). We thank the authors of the MCD-rPPG and Face-Hand datasets for making their data publicly available.
